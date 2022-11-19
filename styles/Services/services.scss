@@ -1,0 +1,50 @@
+@import "../variables";
+
+.section-services {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #7d7d7d25, #d4d4d46c),
+    url("/img/background-services-3-min.jpg");
+
+  @include bgcover(bottom);
+  margin: 40px auto 0;
+  background-attachment: fixed;
+  @supports (-webkit-overflow-scrolling: touch) {
+    background-attachment: scroll;
+  }
+}
+
+.services-wrap-none {
+  visibility: hidden;
+}
+
+.services-wrap {
+  visibility: visible;
+  max-width: 80%;
+  min-width: 290px;
+  padding: 40px 10px 20px;
+  margin-left: auto;
+
+  @media (min-width: 735px) {
+    max-width: 70%;
+  }
+  @media (min-width: 945px) {
+    max-width: 60%;
+  }
+}
+.services-title {
+  margin: 0;
+  color: #ffffffd8;
+  font-size: 2em;
+}
+.services-list {
+  list-style: none;
+  padding: 10px 20px;
+  background: #2b2b2be1;
+}
+.services-item {
+  line-height: 1.5em;
+  color: #ffffffd8;
+  margin: 20px 0;
+}

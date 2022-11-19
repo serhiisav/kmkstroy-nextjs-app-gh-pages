@@ -1,0 +1,64 @@
+@import "../variables";
+
+.section-about {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to left, #4242429c, #dcdcdcd4),
+    url("/img/background-about-1-min.jpg");
+
+  background-attachment: fixed;
+  @include bgcover(center);
+  margin: 40px 0;
+  @supports (-webkit-overflow-scrolling: touch) {
+    background-attachment: scroll;
+  }
+}
+
+.about-wrap-none {
+  visibility: hidden;
+}
+
+.about-wrap {
+  visibility: visible;
+  background: linear-gradient(to bottom, #000000d0, #00000027);
+
+  top: -20px;
+  position: relative;
+  max-width: 80%;
+  min-width: 290px;
+  box-shadow: 0 0 10px 0px #000000c2;
+  padding: 20px 20px;
+  @media (min-width: 735px) {
+    max-width: 70%;
+    padding: 30px;
+  }
+  @media (min-width: 945px) {
+    max-width: 50%;
+  }
+}
+.about-title {
+  margin: 0;
+  padding-bottom: 20px;
+  color: #d0d0d0c5;
+  font-size: 2em;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    background-color: #e4e4e4c5;
+  }
+}
+.about-subtitle {
+  margin: 20px 0;
+  font-size: 1.5em;
+  color: #eeeeeed7;
+}
+.about-description {
+  line-height: 1.5em;
+  text-align: justify;
+  color: #ffffff;
+}

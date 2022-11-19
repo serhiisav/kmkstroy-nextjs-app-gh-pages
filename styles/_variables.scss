@@ -1,0 +1,16 @@
+$bgHeader: #272727;
+$colorTextWhite: #fffafa;
+$bgAccentColor: #4f5f73;
+$colorLinkBlue: #87cefa;
+
+@mixin bgcover($bgPosition) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $bgPosition;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
