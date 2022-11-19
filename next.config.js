@@ -2,7 +2,14 @@
 const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   i18n,
-  basePath: '/gh-pages-test',
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+    }
+  },
   reactStrictMode: true,
   compiler: {
     styledComponents: true
