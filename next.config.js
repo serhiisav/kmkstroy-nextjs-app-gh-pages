@@ -3,6 +3,7 @@ const nextConfig = {
   assetPrefix: '/kmkstroy-nextjs-app-gh-pages',
   // trailingSlash: true,
   reactStrictMode: true,
+  images: { unoptimized: true },
   compiler: {
     styledComponents: true
   }
