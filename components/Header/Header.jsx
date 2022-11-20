@@ -3,7 +3,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { useDispatch, useSelector } from 'react-redux';
 import { setHamburgerOpen } from '../../store/actions';
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import ToggleLanguage from './ToggleLanguage';
 import Image from "next/image";
 

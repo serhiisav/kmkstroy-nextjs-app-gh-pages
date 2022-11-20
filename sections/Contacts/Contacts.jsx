@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 
 function Contacts() {

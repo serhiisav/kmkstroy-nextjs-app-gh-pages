@@ -6,10 +6,10 @@ import { setIdImage } from '../../store/actions';
 import { isMobile } from 'react-device-detect';
 import Box from '@mui/material/Box';
 import Masonry from '@mui/lab/Masonry';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useRouter } from 'next/router'
 
 
 export default function Gallery() {
@@ -21,8 +21,9 @@ export default function Gallery() {
     const [classGalleryWrapper, setClassGalleryWrapper] = useState('fullscreen');
     const [isModal, setIsModal] = useState(false);
     const handle = useFullScreenHandle();
-    const { i18n, t } = useTranslation();
+    const { t } = useTranslation();
     const galleryRef = useRef(null);
+    const router = useRouter()
 
 
     useEffect(() => {
@@ -65,7 +66,7 @@ export default function Gallery() {
             <section ref={galleryRef} className="section-gallery" id='gallery'>
                 <div className='container'>
                     <h1 className='section-gallery-title'>{t('gallery.title')}</h1>
-                    <Link className='gallery-download-link' href={i18n.resolvedLanguage === "ua" ? "/reference_KMKSTROY.pdf" : "reference_KMKSTROY_en.pdf"} hrefLang={i18n.resolvedLanguage} target="_blank" locale={false} download>
+                    <Link className='gallery-download-link' href={router.asPath === "/?lang=en" ? "reference_KMKSTROY_en.pdf" : "/reference_KMKSTROY.pdf"} target="_blank" locale={false} download>
                         <Image
                             src={'/img/gallery_pdf_icon.svg'}
                             alt=".pdf" height={30}
@@ -96,7 +97,7 @@ export default function Gallery() {
                                     </i>
                                     <div className="gallery-text-content">
                                         <p className='gallery-image-title'>
-                                            {i18n.resolvedLanguage === "ua" ? item.title_ua : item.title_en}</p>
+                                            {router.asPath === "/?lang=en" ? item.title_en : item.title_ua}</p>
                                     </div>
                                 </div>
                             )

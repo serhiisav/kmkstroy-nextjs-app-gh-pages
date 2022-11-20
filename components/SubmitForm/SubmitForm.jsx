@@ -5,7 +5,7 @@ import NumberFormat from 'react-number-format';
 import SubmitFormField from "./SubmitFormField";
 import axios from "axios";
 import { useInViewport } from 'react-in-viewport';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 
 const SubmitForm = () => {
@@ -42,7 +42,7 @@ const SubmitForm = () => {
         } else if (statusSubmit === null) {
             setMessageSubmit(null)
         }
-    }, [statusSubmit, i18n.resolvedLanguage])
+    }, [statusSubmit])
 
 
     return (

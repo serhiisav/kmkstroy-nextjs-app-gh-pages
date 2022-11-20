@@ -11,7 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/lazy";
 import styled from 'styled-components';
-import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+
 
 
 const ThumbsStyled = styled.div`
@@ -54,9 +55,7 @@ export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }
     const [topThumbs, setTopThumbs] = useState(0);
     const modalRef = useRef(null);
     const thumbsRef = useRef(null);
-
-    const { i18n } = useTranslation();
-
+    const router = useRouter();
 
 
     useEffect(() => {
@@ -144,8 +143,8 @@ export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }
                                         height={item.height}
                                     />
                                     <div className="mySwiper-text-content">
-                                        <p className='mySwiper-image-title'>{i18n.resolvedLanguage === "ua" ? item.title_ua : item.title_en}</p>
-                                        <p className='mySwiper-image-description'>{i18n.resolvedLanguage === "ua" ? item.description_ua : item.description_en}</p>
+                                        <p className='mySwiper-image-title'>{router.asPath === "/?lang=en" ? item.title_en : item.title_ua}</p>
+                                        <p className='mySwiper-image-description'>{router.asPath === "/?lang=en" ? item.description_en : item.description_ua}</p>
                                     </div>
                                     <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                                 </div>

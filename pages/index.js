@@ -15,13 +15,12 @@ import { useDispatch } from 'react-redux';
 import { addAllImages } from './../store/thunk';
 import { useEffect } from 'react';
 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import { getGallery } from './api/getGallery';
 
 
 
-export async function getServerSideProps({ locale }) {
+export async function getServerSideProps() {
   const gallery = await getGallery();
 
   if (!gallery) {
@@ -32,7 +31,6 @@ export async function getServerSideProps({ locale }) {
   return {
     props: {
       gallery,
-      ...(await serverSideTranslations(locale, ['common', 'home'])),
     }
   }
 }

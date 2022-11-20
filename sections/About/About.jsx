@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useInViewport } from 'react-in-viewport';
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 function About() {
     const aboutRef = useRef();
