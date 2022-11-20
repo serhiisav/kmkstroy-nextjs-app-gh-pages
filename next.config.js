@@ -1,6 +1,6 @@
 const nextConfig = {
-  basePath: '/kmkstroy-nextjs-app-gh-pages',
-  assetPrefix: '/kmkstroy-nextjs-app-gh-pages',
+  // basePath: '/kmkstroy-nextjs-app-gh-pages',
+  // assetPrefix: '/kmkstroy-nextjs-app-gh-pages',
   // trailingSlash: true,
   reactStrictMode: true,
   images: { unoptimized: true },
