@@ -19,23 +19,6 @@ import { useTranslation } from "next-export-i18n";
 import { getGallery } from './api/getGallery';
 
 
-
-export async function getServerSideProps() {
-  const gallery = await getGallery();
-
-  if (!gallery) {
-    return {
-      notFound: true,
-    }
-  };
-  return {
-    props: {
-      gallery,
-    }
-  }
-}
-
-
 export default function Home({ gallery }) {
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -87,4 +70,18 @@ export default function Home({ gallery }) {
 
     </>
   )
+}
+
+Home.getInitialProps = async (ctx) => {
+  const gallery = await getGallery();
+
+  if (!gallery) {
+    return {
+      notFound: true,
+    }
+  };
+  return {
+    gallery,
+  }
+
 }
