@@ -25,7 +25,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  padding: 0.5rem;
+  padding: 0.1rem 0.5rem;
   position: relative;
   text-decoration: none;
   cursor: pointer;
@@ -44,7 +44,7 @@
 }
 .langSwitcher [data-language-switcher]::after {
   content: "";
-  bottom: 7px;
+  bottom: 0;
   left: 7px;
   width: 0;
   height: 1px;
