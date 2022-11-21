@@ -13,7 +13,6 @@ import '../styles/Contacts/contacts.scss'
 
 import { Provider } from 'react-redux';
 import store from '../store/store';
-import { appWithTranslation } from 'next-i18next';
 
 
 function MyApp({ Component, pageProps }) {
@@ -26,5 +25,5 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;
 

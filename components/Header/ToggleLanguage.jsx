@@ -1,4 +1,4 @@
-import { useTranslation, LanguageSwitcher } from 'next-export-i18n';
+import { LanguageSwitcher } from 'next-export-i18n';
 
 export default function ToggleLanguage() {
 
