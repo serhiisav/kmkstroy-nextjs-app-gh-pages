@@ -4,7 +4,7 @@
   // padding-top: 165px;
   min-height: 100vh;
   width: 100%;
-  background-image: url("/img/background-header-1-min.jpg");
+  background-image: url($urlPrefix+"/img/background-header-1-min.jpg");
   @include bgcover(bottom);
   background-attachment: fixed;
   @supports (-webkit-overflow-scrolling: touch) {

@@ -15,7 +15,6 @@ function Header() {
     const urlPrefix = useSelector(state => state.prefix);
     const hamburgerRef = useRef(null);
     const { t } = useTranslation();
-    // const prefix = "/kmkstroy-nextjs-app-gh-pages"
 
     // useEffect(() => {
     //     if (hamburgerOpen) {
