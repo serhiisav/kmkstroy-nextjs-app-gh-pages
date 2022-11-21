@@ -23,7 +23,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 env:
-  PROD_URL: ${{env.PROD_URL}}
+  PROD_URL: ${{secrets.PROD_URL}}
   
 jobs:
   # Build job
