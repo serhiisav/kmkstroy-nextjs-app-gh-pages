@@ -31,7 +31,7 @@
 
 .form-company-info {
   background: linear-gradient(to bottom, #2e4a5f51, #0010257b),
-    url("/img/background-contact-form1.jpg");
+    url($urlPrefix+"/img/background-contact-form1.jpg");
   @include bgcover(center);
 
   color: #ffffff;
@@ -39,7 +39,7 @@
 
   @media (min-width: 735px) {
     background: linear-gradient(to bottom, #0028484e, #00000066),
-      url("/img/background-contact-form1.jpg");
+      url($urlPrefix+"/img/background-contact-form1.jpg");
     @include bgcover(center);
   }
   & h3 {

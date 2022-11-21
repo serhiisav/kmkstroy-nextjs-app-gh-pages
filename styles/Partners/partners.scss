@@ -6,7 +6,7 @@
   margin-bottom: 80px;
   // background: linear-gradient(to bottom, #ffffff2c, #a0a0a01a),
   //   url("/img/partners-background.jpg");
-  background: url("/img/partners-background-modified.png");
+  background: url($urlPrefix+"/img/partners-background-modified.png");
 
   box-shadow: 0 0 20px 0 #3f3f3f;
   @include bgcover(center);

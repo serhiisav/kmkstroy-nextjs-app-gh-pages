@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to left, #4242429c, #dcdcdcd4),
-    url("/img/background-about-1-min.jpg");
+    url($urlPrefix+"/img/background-about-1-min.jpg");
 
   background-attachment: fixed;
   @include bgcover(center);

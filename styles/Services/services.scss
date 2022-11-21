@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to bottom, #7d7d7d25, #d4d4d46c),
-    url("/img/background-services-3-min.jpg");
+    url($urlPrefix+"/img/background-services-3-min.jpg");
 
   @include bgcover(bottom);
   margin: 40px auto 0;
