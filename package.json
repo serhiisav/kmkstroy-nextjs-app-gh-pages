@@ -2,6 +2,7 @@
   "name": "kmkstroy-nextjs-app-gh-pages",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://serhiisav.github.io/kmkstroy-nextjs-app-gh-pages/",
   "scripts": {
     "lint": "next lint",
     "dev": "cross-env node server.js",
