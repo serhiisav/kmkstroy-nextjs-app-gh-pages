@@ -57,11 +57,11 @@
   }
 
   & .swiper-button-prev {
-    background-image: url("/img/gallery-chevron-left.svg");
+    background-image: url($urlPrefix+"/img/gallery-chevron-left.svg");
   }
 
   & .swiper-button-next {
-    background-image: url("/img/gallery-chevron-right.svg");
+    background-image: url($urlPrefix+"/img/gallery-chevron-right.svg");
   }
 
   & .swiper-button-prev::after,

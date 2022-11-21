@@ -37,7 +37,7 @@ const ThumbsStyled = styled.div`
     left: 50%;
     top: ${props => props.top}px;
     transform: translate(-50%, -105%);
-    background-image: url("/img/gallery-chevron-up.svg");
+    background-image: url("/kmkstroy-nextjs-app-gh-pages/img/gallery-chevron-up.svg");
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
