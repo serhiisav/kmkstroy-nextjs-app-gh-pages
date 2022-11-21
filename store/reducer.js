@@ -2,6 +2,7 @@ const initialState = {
     galleryItems: [],
     idImage: null,
     hamburgerOpen: false,
+    prefix: "/kmkstroy-nextjs-app-gh-pages",
 }
 
 const reducer = (state = initialState, action) => {

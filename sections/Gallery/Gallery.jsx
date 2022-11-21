@@ -15,6 +15,8 @@ import { useRouter } from 'next/router'
 export default function Gallery() {
     const dispatch = useDispatch();
     const galleryItems = useSelector(state => state.galleryItems);
+    const urlPrefix = useSelector(state => state.prefix);
+
     const [inModalWindow, setInModalWindow] = useState(false);
     const [numberImages, setNumberImages] = useState(6);
     const [isLoadingMore, setIsloadingMore] = useState(false);
@@ -68,7 +70,7 @@ export default function Gallery() {
                     <h1 className='section-gallery-title'>{t('gallery.title')}</h1>
                     <Link className='gallery-download-link' href={router.asPath === "/?lang=en" ? "reference_KMKSTROY_en.pdf" : "/reference_KMKSTROY.pdf"} target="_blank" locale={false} download>
                         <Image
-                            src={'/img/gallery_pdf_icon.svg'}
+                            src={urlPrefix + '/img/gallery_pdf_icon.svg'}
                             alt=".pdf" height={30}
                             width={30} />
                         {t('gallery.download')} (pdf)
@@ -86,7 +88,7 @@ export default function Gallery() {
                                             handleScreenOpen();
                                         }}
                                         className='gallery-image'
-                                        src={item.img540}
+                                        src={urlPrefix + item.img540}
                                         alt={item.id}
                                         width={540}
                                         height={item.height_540}

@@ -8,11 +8,14 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { useTranslation } from "next-export-i18n";
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 
 
 export default function Partners() {
     const partnersRef = useRef();
     const { t } = useTranslation();
+    const urlPrefix = useSelector(state => state.prefix);
+
 
     const partners = [
         {
@@ -121,7 +124,7 @@ export default function Partners() {
                                 <div>
                                     <Image
                                         key={item.name}
-                                        src={item.src}
+                                        src={urlPrefix + item.src}
                                         alt={'logo ' + item.name}
                                         height={item.height}
                                         width={item.width}

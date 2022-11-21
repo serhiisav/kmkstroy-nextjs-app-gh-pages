@@ -12,9 +12,10 @@ import Image from "next/image";
 function Header() {
     const dispatch = useDispatch();
     const hamburgerOpen = useSelector(state => state.hamburgerOpen);
+    const urlPrefix = useSelector(state => state.prefix);
     const hamburgerRef = useRef(null);
     const { t } = useTranslation();
-    const prefix = "/kmkstroy-nextjs-app-gh-pages"
+    // const prefix = "/kmkstroy-nextjs-app-gh-pages"
 
     // useEffect(() => {
     //     if (hamburgerOpen) {
@@ -60,7 +61,7 @@ function Header() {
                         >
                             <Image
                                 className="header-logo"
-                                src={prefix + t('header.logo')}
+                                src={urlPrefix + t('header.logo')}
                                 onMouseOver={e => e.currentTarget.src = t('header.logo-hover')}
                                 onMouseOut={e => e.currentTarget.src = t('header.logo')}
                                 alt="logo"
@@ -83,7 +84,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-home.svg'} alt="icon-home"
+                                            src={urlPrefix + '/img/icon-home.svg'} alt="icon-home"
                                             height={30}
                                             width={30}
                                             priority
@@ -105,7 +106,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-about.svg'} alt="icon-about"
+                                            src={urlPrefix + '/img/icon-about.svg'} alt="icon-about"
                                             height={30}
                                             width={30}
                                         />
@@ -126,7 +127,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-services.svg'} alt="icon-services"
+                                            src={urlPrefix + '/img/icon-services.svg'} alt="icon-services"
                                             height={30}
                                             width={30}
                                         />
@@ -148,7 +149,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-gallery.svg'} alt="icon-gallery"
+                                            src={urlPrefix + '/img/icon-gallery.svg'} alt="icon-gallery"
                                             height={30}
                                             width={30}
                                         />
@@ -170,7 +171,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-partners.svg'} alt="icon-partners"
+                                            src={urlPrefix + '/img/icon-partners.svg'} alt="icon-partners"
                                             height={30}
                                             width={30}
                                         />
@@ -192,7 +193,7 @@ function Header() {
                                     >
                                         <Image
                                             className="header-nav-item-icon"
-                                            src={prefix + '/img/icon-contacts.svg'} alt="icon-contacts"
+                                            src={urlPrefix + '/img/icon-contacts.svg'} alt="icon-contacts"
                                             height={30}
                                             width={30}
                                         />
@@ -206,7 +207,7 @@ function Header() {
                             <div className="header-contacts">
                                 <div className="header-contacts-link-wrap">
                                     <Image
-                                        src={prefix + '/img/icon-phone.svg'}
+                                        src={urlPrefix + '/img/icon-phone.svg'}
                                         alt="icon-phone"
                                         height={20}
                                         width={20} />
@@ -215,7 +216,7 @@ function Header() {
                                 </div>
                                 <div className="header-contacts-link-wrap">
                                     <Image
-                                        src={prefix + '/img/icon-email.svg'} alt="icon-email"
+                                        src={urlPrefix + '/img/icon-email.svg'} alt="icon-email"
                                         height={20}
                                         width={20} />
                                     <a className="header-contacts-link" href="mailto:kmkstroy82@gmail.com"

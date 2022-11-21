@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { useTranslation } from "next-export-i18n";
+import { useSelector } from "react-redux";
 
 
 function Contacts() {
     const { t } = useTranslation();
+    const urlPrefix = useSelector(state => state.prefix);
+
 
     return (
         <>
@@ -13,7 +16,7 @@ function Contacts() {
                         <div className="contacts-logo-wrap">
                             <Image
                                 className="contacts-logo"
-                                src={t('footer.logo')}
+                                src={urlPrefix + t('footer.logo')}
                                 alt="logo"
                                 height={115}
                                 width={115}
@@ -31,11 +34,11 @@ function Contacts() {
                                 <p className="contacts-address-content">{t('footer.address_city')}<br />{t('footer.address_street')}</p>
                             </div>
                             <div className="contacts-address-content-wrap">
-                                <Image src={'/img/footer-icon-phone.svg'} alt='icon-phone' height={24} width={24} />
+                                <Image src={urlPrefix + '/img/footer-icon-phone.svg'} alt='icon-phone' height={24} width={24} />
                                 <a className="contacts-link" href="tel:+380675611900">+38(067)-561-19-00</a>
                             </div>
                             <div className="contacts-address-content-wrap">
-                                <Image src={'/img/footer-icon-phone.svg'} alt='icon-phone' height={24} width={24} />
+                                <Image src={urlPrefix + '/img/footer-icon-phone.svg'} alt='icon-phone' height={24} width={24} />
                                 <a className="contacts-link" href="tel:+380675746914">+38(067)-574-69-14</a>
                             </div>
                             <div className="contacts-address-content-wrap">
@@ -46,7 +49,7 @@ function Contacts() {
                         </div>
                         <Image
                             className="footer-img"
-                            src={'/img/footer-img.jpg'}
+                            src={urlPrefix + '/img/footer-img.jpg'}
                             alt="img"
                             height={189}
                             width={272}
@@ -63,7 +66,7 @@ function Contacts() {
                         >
                             <Image
                                 className="footer-youtube-img"
-                                src={'/img/footer-youtube-logo.svg'}
+                                src={urlPrefix + '/img/footer-youtube-logo.svg'}
                                 alt="YouTube-Link"
                                 height={15}
                                 width={68}

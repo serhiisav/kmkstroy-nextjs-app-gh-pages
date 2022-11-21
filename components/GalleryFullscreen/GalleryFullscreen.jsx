@@ -48,6 +48,7 @@ const ThumbsStyled = styled.div`
 
 export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }) {
     const galleryItems = useSelector(state => state.galleryItems);
+    const urlPrefix = useSelector(state => state.prefix);
     const idImage = useSelector(state => state.idImage);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [swiper, setSwiper] = useState(null);
@@ -100,7 +101,7 @@ export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }
                     <Image
                         className={`button-swiper-close`}
                         onClick={handleScreenClose}
-                        src={'/img/gallery-minimize.svg'}
+                        src={urlPrefix + '/img/gallery-minimize.svg'}
                         alt='close'
                         height={40}
                         width={40}
@@ -136,8 +137,8 @@ export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }
                                 <div>
                                     <Image
                                         className='fullscreen-gallery-image swiper-lazy'
-                                        src={item.img}
-                                        data-src={item.img}
+                                        src={urlPrefix + item.img}
+                                        data-src={urlPrefix + item.img}
                                         alt='preview'
                                         width={item.width}
                                         height={item.height}
@@ -185,8 +186,8 @@ export default function GalleryFullscreen({ handleScreenClose, isOpen, isModal }
                                         <div>
                                             <Image
                                                 className='thumbs-image swiper-lazy'
-                                                src={item.thumbs}
-                                                data-src={item.thumbs}
+                                                src={urlPrefix + item.thumbs}
+                                                data-src={urlPrefix + item.thumbs}
                                                 alt='preview'
                                                 width={222}
                                                 height={100}
