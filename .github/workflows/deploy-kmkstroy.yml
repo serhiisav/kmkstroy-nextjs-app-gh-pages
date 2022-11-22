@@ -22,6 +22,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
+
 jobs:
   # Build job
   build:
