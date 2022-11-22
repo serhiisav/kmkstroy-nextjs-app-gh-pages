@@ -6,7 +6,7 @@ const nextConfig = {
   assetPrefix: pathPrefix,
   trailingSlash: true,
   reactStrictMode: true,
-  images: { unoptimized: true },
+  // images: { unoptimized: true },
   compiler: {
     styledComponents: true
   }
