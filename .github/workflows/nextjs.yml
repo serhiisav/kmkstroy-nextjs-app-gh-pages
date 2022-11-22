@@ -26,6 +26,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    env:
+      PROD_URL: ${{secrets.PROD_URL}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
