@@ -61,8 +61,8 @@ function Header() {
                             <Image
                                 className="header-logo"
                                 src={urlPrefix + t('header.logo')}
-                                onMouseOver={e => e.currentTarget.src = t('header.logo-hover')}
-                                onMouseOut={e => e.currentTarget.src = t('header.logo')}
+                                onMouseOver={e => e.currentTarget.src = urlPrefix + t('header.logo-hover')}
+                                onMouseOut={e => e.currentTarget.src = urlPrefix + t('header.logo')}
                                 alt="logo"
                                 height={75}
                                 width={75} />
