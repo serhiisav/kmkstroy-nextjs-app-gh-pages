@@ -72,16 +72,17 @@ export default function Home({ gallery }) {
   )
 }
 
-Home.getInitialProps = async (ctx) => {
+export async function getStaticProps() {
   const gallery = await getGallery();
-
   if (!gallery) {
     return {
       notFound: true,
     }
   };
   return {
-    gallery,
+    props: {
+      gallery,
+    }
   }
 
 }

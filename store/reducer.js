@@ -1,8 +1,12 @@
+const pathPrefix = process.env.NODE_ENV === 'production'
+    ? '/kmkstroy-nextjs-app-gh-pages'
+    : '';
+
 const initialState = {
     galleryItems: [],
     idImage: null,
     hamburgerOpen: false,
-    prefix: "/kmkstroy-nextjs-app-gh-pages",
+    prefix: process.env.NODE_ENV === 'production' ? 'kmkstroy-nextjs-app-gh-pages' : '',
 }
 
 const reducer = (state = initialState, action) => {

@@ -3,4 +3,4 @@ import { gallery } from "./data/gallery"
 
 export default function handler(req, res) {
     res.status(200).json({ gallery })
-}
+}   
