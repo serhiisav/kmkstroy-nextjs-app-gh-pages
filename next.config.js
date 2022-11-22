@@ -1,9 +1,9 @@
-const pathPrefix = process.env.NODE_ENV === 'production'
-  ? '/kmkstroy-nextjs-app-gh-pages'
-  : '';
+// const pathPrefix = process.env.NODE_ENV === 'production'
+//   ? '/kmkstroy-nextjs-app-gh-pages'
+//   : '';
 const nextConfig = {
-  basePath: pathPrefix,
-  assetPrefix: pathPrefix,
+  basePath: "/kmkstroy-nextjs-app-gh-pages",
+  assetPrefix: "/kmkstroy-nextjs-app-gh-pages",
   trailingSlash: true,
   reactStrictMode: true,
   images: { unoptimized: true },
